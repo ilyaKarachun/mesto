@@ -1,0 +1,7 @@
+.body {
+    background-color: #000000;
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+}

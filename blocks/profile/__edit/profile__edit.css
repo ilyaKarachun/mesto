@@ -1,0 +1,17 @@
+.profile__edit {
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border: 1px solid #FFFFFF;
+    background-image: url(../../../images/Vector.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1015px) {
+    .profile__edit {
+        width: 12px;
+        height: 12px;
+    }
+}

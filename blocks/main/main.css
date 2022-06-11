@@ -1,0 +1,30 @@
+.main {
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    width: calc(100% - 400px);
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        width: calc(100% - 200px);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .main {
+        width: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .main {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        width: calc(100% - 38px);
+    }
+}

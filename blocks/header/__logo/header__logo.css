@@ -1,0 +1,40 @@
+.header__logo {
+    color: white;
+    max-width: 142px;
+    max-height: 33px;
+    padding-top: 45px;
+    padding-bottom: 41px;
+}
+
+@media screen and (max-width: 1015px) {
+    .header__logo {
+        max-width: 138px;
+        max-height: 30px;
+        padding-top: 38px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .header__logo {
+        max-width: 125px;
+        max-height: 25px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .header__logo {
+        padding-top: 20px;
+        padding-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__logo {
+        padding: 28px 0px 30px 27px;
+        width: 103.74px;
+        height: 24.4px;
+    }
+}
