@@ -12,11 +12,23 @@ const openPopup = (event) => {
     popup.classList.add('popup_opened');
 };
 
-const popupCloseEvent = (event) => {
+function popupCloseEvent (event) {
     popup.classList.remove('popup_opened');
 };
 
 
 buttonEdit.addEventListener('click', openPopup);
 popupClose.addEventListener('click', popupCloseEvent);
+
+//   снизу не сделан попап
+
+popup.addEventListener('click', (event) => {
+    if(!event.defaultPrevented) {
+        popupCloseEvent();
+    }
+})
+
+document.querySelector('.popup__container').addEventListener('click', (event) => {
+    event.preventDefault();
+});
 
