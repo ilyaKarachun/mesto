@@ -7,6 +7,7 @@
     grid-column: 4/5;
     align-self: center;
     justify-self: end;
+    background-position: center;
 }
 
 @media screen and (max-width: 1115px) {
