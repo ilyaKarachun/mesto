@@ -20,7 +20,7 @@ function popupCloseEvent (event) {
 buttonEdit.addEventListener('click', openPopup);
 popupClose.addEventListener('click', popupCloseEvent);
 
-//   снизу не сделан попап
+
 
 popup.addEventListener('click', (event) => {
     if(!event.defaultPrevented) {
@@ -32,3 +32,19 @@ document.querySelector('.popup__container').addEventListener('click', (event) =>
     event.preventDefault();
 });
 
+let formElement = document.querySelector('.popup__container');
+
+let saveBTN = formElement.querySelector('.popup__button');
+
+
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+
+    let nameInput = formElement.querySelector('.popup__person');
+    let jobInput = formElement.querySelector('.popup__character');
+
+   nameInput = nameInput.textContent(`${nameInput.value}`);
+    jobInput =  jobInput.textContent(`${jobInput.value}`);
+};
+
+saveBTN.addEventListener('submit', formSubmitHandler);
