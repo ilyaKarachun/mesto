@@ -2,8 +2,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.6px;
+    font-size: 18px;
     line-height: 22px;
     color: #545454;
     padding: 0;
@@ -13,14 +12,13 @@
 @media screen and (max-width: 840px) {
     .footer__title  {
         font-size: 12px;
-        letter-spacing: 0.4px;
         line-height: 14px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .footer__title  {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 17px;
     }
 }

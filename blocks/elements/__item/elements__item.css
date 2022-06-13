@@ -4,18 +4,23 @@
     grid-template-rows: 1fr 1fr;
     background-color: white;
     height: 361px;
+    width: 282px;
     border-radius: 10px;
-    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 690px) {
     .elements__item {
         max-height: 299px;
+        max-width: 220px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .elements__item {
         max-height: 361px;
+        max-width: 282px;
     }
 }
