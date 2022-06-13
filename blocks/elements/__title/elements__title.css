@@ -11,3 +11,8 @@
     overflow: hidden;
     margin: 0;
 }
+
+@media screen and (max-width: 695px) {
+    .elements__title {
+        width: 120gitpx;
+}

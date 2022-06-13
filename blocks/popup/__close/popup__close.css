@@ -7,3 +7,12 @@
     top: -42px;
     border: black;
 }
+
+@media screen and (max-width: 450px) {
+    .popup__close {
+        width: 20px;
+        height: 20px;
+        right: 6px;
+        top: -36px;
+    }
+}
