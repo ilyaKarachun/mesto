@@ -8,6 +8,13 @@
     align-self: center;
     justify-self: end;
     background-position: center;
+    cursor: pointer;
+}
+/* not complete */
+.profile__add:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    transition: background-color 0s;
 }
 
 @media screen and (max-width: 1115px) {

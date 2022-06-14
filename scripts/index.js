@@ -22,29 +22,37 @@ popupClose.addEventListener('click', popupCloseEvent);
 
 
 
-popup.addEventListener('click', (event) => {
-    if(!event.defaultPrevented) {
-        popupCloseEvent();
-    }
-})
+// popup.addEventListener('click', (event) => {
+//     if(!event.defaultPrevented) {
+//         popupCloseEvent();
+//     }
+// })
 
-document.querySelector('.popup__container').addEventListener('click', (event) => {
-    event.preventDefault();
-});
+// document.querySelector('.popup__body').addEventListener('click', (event) => {
+//     event.preventDefault();
+// });
 
 let formElement = document.querySelector('.popup__container');
 
-let saveBTN = formElement.querySelector('.popup__button');
-
-
 function formSubmitHandler (evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
+    let newTitle = document.querySelector('.profile__title');
+    console.log(newTitle);
+    let newText = document.querySelector('.profile__text');
 
     let nameInput = formElement.querySelector('.popup__person');
     let jobInput = formElement.querySelector('.popup__character');
 
-   nameInput = nameInput.textContent(`${nameInput.value}`);
-    jobInput =  jobInput.textContent(`${jobInput.value}`);
+    newTitle.textContent = nameInput.value;
+    console.log(newTitle.textContent);
+    newText.textContent = jobInput.value;
+
+    popupCloseEvent();
+    evt.preventDefault();
 };
 
-saveBTN.addEventListener('submit', formSubmitHandler);
+
+formElement.addEventListener('submit', formSubmitHandler);
+
+
+
