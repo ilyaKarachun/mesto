@@ -22,20 +22,20 @@ popupClose.addEventListener('click', popupCloseEvent);
 
 
 
-// popup.addEventListener('click', (event) => {
-//     if(!event.defaultPrevented) {
-//         popupCloseEvent();
-//     }
-// })
+popup.addEventListener('click', (event) => {
+    if(event.target === popup) {
+        popupCloseEvent();
+    }
+})
 
 // document.querySelector('.popup__body').addEventListener('click', (event) => {
 //     event.preventDefault();
-// });
+// });пше
 
 let formElement = document.querySelector('.popup__container');
 
 function formSubmitHandler (evt) {
-    // evt.preventDefault();
+    evt.preventDefault();
     let newTitle = document.querySelector('.profile__title');
     console.log(newTitle);
     let newText = document.querySelector('.profile__text');
@@ -44,11 +44,11 @@ function formSubmitHandler (evt) {
     let jobInput = formElement.querySelector('.popup__character');
 
     newTitle.textContent = nameInput.value;
-    console.log(newTitle.textContent);
+    
     newText.textContent = jobInput.value;
 
     popupCloseEvent();
-    evt.preventDefault();
+    
 };
 
 
