@@ -28,9 +28,6 @@ popup.addEventListener('click', (event) => {
     }
 })
 
-// document.querySelector('.popup__body').addEventListener('click', (event) => {
-//     event.preventDefault();
-// });пше
 
 let formElement = document.querySelector('.popup__container');
 
@@ -55,4 +52,10 @@ function formSubmitHandler (evt) {
 formElement.addEventListener('submit', formSubmitHandler);
 
 
+let likeBTN = document.querySelector('.elements__like');
 
+function likesGiven(event) {
+    likeBTN.classList.toggle('elements__like_active');
+}
+
+likeBTN.addEventListener('click', likesGiven);

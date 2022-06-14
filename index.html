@@ -7,7 +7,7 @@
     <meta name="author" content="Ilya Karachun" />
     <meta name="description" content="Third project by Ilya Karachun" />
     <meta name="keywords" content="html, css, js" />
-    
+
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Mesto</title>
   </head>
@@ -18,11 +18,10 @@
     <main class="main">
       <section aria-label="profile" class="profile">
         <img src="./images/avatar.png" alt="avatar" class="profile__avatar" />
-        <div class="profile__title">
-          Жак-Ив Кусто
-          <button class="profile__edit"></button>
-        </div>
-        <p class="profile__text">Исследователь океана</p>
+        <h1 class="profile__title">Жак-Ив Кусто</h1>
+        <button class="profile__edit"></button>
+
+        <h2 class="profile__text">Исследователь океана</h2>
         <button class="profile__add">
           <img src="./images/plus.png" alt="button_add" class="profile__plus" />
         </button>
@@ -75,7 +74,7 @@
           />
           <div class="elements__section">
             <h4 class="elements__title">Карачаево-Черкесия</h4>
-            <button class="elements__like"></button>
+            <button class="elements__like elements__like_active"></button>
           </div>
         </div>
       </section>
@@ -86,10 +85,14 @@
     <div class="popup">
       <div class="popup__body">
         <form class="popup__container">
-        <button class="popup__close">
-          <img src="./images/Close Icon.png" alt="close" class="popup__close_img"/>
-        </button>
-        <h2 class="popup__title">Редактировать профиль</h2>
+          <button class="popup__close">
+            <img
+              src="./images/Close_Icon.png"
+              alt="close"
+              class="popup__close_img"
+            />
+          </button>
+          <h2 class="popup__title">Редактировать профиль</h2>
           <input type="text" placeholder="Жак-Ив Кусто" class="popup__person" />
           <input
             type="text"
@@ -97,8 +100,8 @@
             class="popup__character"
           />
           <button type="submit" class="popup__button">Сохранить</button>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
     <script async src="./scripts/index.js"></script>
   </body>

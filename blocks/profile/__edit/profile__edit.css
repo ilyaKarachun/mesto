@@ -1,18 +1,39 @@
 .profile__edit {
-    width: 24px;
-    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    width: 100%;
+    height: 100%;
     background-color: black;
     border: 1px solid #FFFFFF;
     background-image: url(../../../images/Vector.png);
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 10px;
     cursor: pointer;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.profile__edit:hover {
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 1015px) {
     .profile__edit {
-        width: 12px;
-        height: 12px;
+        max-width: 18px;
+        max-height: 18px;
     }
 }
+
+
+@media screen and (max-width: 450px) {
+    .profile__edit {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: end;
+        align-self: end;
+        margin: 0 19px 7px 0;
+    }
+}
+

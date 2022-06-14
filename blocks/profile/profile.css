@@ -4,7 +4,7 @@
     grid-template-columns: min-content max-content 1fr min-content;
     grid-template-rows: 40px min-content 51px;
     position: relative;
-    column-gap: 29px;
+    column-gap: 18px;
 }
 
 @media screen and (max-width: 840px) {
@@ -17,7 +17,7 @@
     .profile {
         grid-template-columns: 100%;
         grid-template-rows: 1fr;
-        padding: 41px 0px 36px;
+        padding: 42px 0px 37px;
         justify-items: center;
     }
 }

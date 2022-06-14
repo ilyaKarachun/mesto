@@ -1,18 +1,34 @@
 .elements__title {
-    font-family: 'Inter';
+    font-family: 'Inter', 'Arial', 'sans-serif';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    width: 192px;
+    max-width: 192px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     margin: 0;
 }
 
+@media screen and (max-width: 1000px) {
+    .elements__title {
+        max-width: 120px;
+        font-size: 20px;
+        line-height: 25px;
+}
+
 @media screen and (max-width: 695px) {
     .elements__title {
-        width: 120px;
+        max-width: 120px;
+        font-size: 18px;
+        line-height: 23px;
+}
+
+@media screen and (max-width: 450px) {
+    .elements__title {
+        max-width: 172px;
+        font-size: 24px;
+        line-height: 29px;
 }
