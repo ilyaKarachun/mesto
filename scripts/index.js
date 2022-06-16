@@ -4,6 +4,7 @@ const popupClose = document.querySelector('.popup__close');
 
 const openPopup = (event) => {
     popup.classList.add('popup_opened');
+    
 };
 
 function popupCloseEvent (event) {
@@ -14,36 +15,29 @@ function popupCloseEvent (event) {
 buttonEdit.addEventListener('click', openPopup);
 popupClose.addEventListener('click', popupCloseEvent);
 
+let formElement = document.querySelector('.popup__body');
 
-// let newTitle = document.querySelector('.profile__title');
-// let newText = document.querySelector('.profile__text');
+let nameInput = formElement.querySelector('.popup__character_name');
+let jobInput = formElement.querySelector('.popup__character_job')
 
-// let nameInput = formElement.querySelector('.popup__person');
-// let jobInput = formElement.querySelector('.popup__character');
+let profileName = document.querySelector('.profile__title');
+let profileJob = document.querySelector('.profile__text');
 
-// Закрытие попапа по фону
-// popup.addEventListener('click', (event) => {
-//     if(event.target === popup) {
-//         popupCloseEvent();
-//     }
-// })
+nameInput.textContent = profileName.value;
+jobInput.textContent = profileJob.value;
 
 
-// let formElement = document.querySelector('.popup__container');
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+    profileName.textContent = nameInput.value;
+    profileJob.textContent = jobInput.value;
+    popupCloseEvent();
+};
 
-// function formSubmitHandler (evt) {
-//     evt.preventDefault();
-
-//     newTitle.textContent = nameInput.value;
-    
-//     newText.textContent = jobInput.value;
-
-//     popupCloseEvent();
-    
-// };
+formElement.addEventListener('submit', formSubmitHandler);
 
 
-// formElement.addEventListener('submit', formSubmitHandler);
+
 
 // Постановка/снятие лайков
 // let likeBTN = document.querySelector('.elements__like');
@@ -53,3 +47,10 @@ popupClose.addEventListener('click', popupCloseEvent);
 // }
 
 // likeBTN.addEventListener('click', likesGiven);
+
+// Закрытие попапа по фону
+// popup.addEventListener('click', (event) => {
+//     if(event.target === popup) {
+//         popupCloseEvent();
+//     }
+// })
