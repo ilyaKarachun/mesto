@@ -22,7 +22,6 @@
 
 @media screen and (max-width: 695px) {
     .elements__title {
-        max-width: 120px;
         font-size: 18px;
         line-height: 23px;
 }

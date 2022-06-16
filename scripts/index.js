@@ -1,11 +1,5 @@
-console.log(document.querySelector('.profile__edit'));
-
 const buttonEdit = document.querySelector('.profile__edit');
-console.log(buttonEdit);
-
 const popup = document.querySelector('.popup');
-console.log(popup);
-
 const popupClose = document.querySelector('.popup__close');
 
 const openPopup = (event) => {
@@ -21,41 +15,41 @@ buttonEdit.addEventListener('click', openPopup);
 popupClose.addEventListener('click', popupCloseEvent);
 
 
+// let newTitle = document.querySelector('.profile__title');
+// let newText = document.querySelector('.profile__text');
 
-popup.addEventListener('click', (event) => {
-    if(event.target === popup) {
-        popupCloseEvent();
-    }
-})
+// let nameInput = formElement.querySelector('.popup__person');
+// let jobInput = formElement.querySelector('.popup__character');
+
+// Закрытие попапа по фону
+// popup.addEventListener('click', (event) => {
+//     if(event.target === popup) {
+//         popupCloseEvent();
+//     }
+// })
 
 
-let formElement = document.querySelector('.popup__container');
+// let formElement = document.querySelector('.popup__container');
 
-function formSubmitHandler (evt) {
-    evt.preventDefault();
-    let newTitle = document.querySelector('.profile__title');
-    console.log(newTitle);
-    let newText = document.querySelector('.profile__text');
+// function formSubmitHandler (evt) {
+//     evt.preventDefault();
 
-    let nameInput = formElement.querySelector('.popup__person');
-    let jobInput = formElement.querySelector('.popup__character');
-
-    newTitle.textContent = nameInput.value;
+//     newTitle.textContent = nameInput.value;
     
-    newText.textContent = jobInput.value;
+//     newText.textContent = jobInput.value;
 
-    popupCloseEvent();
+//     popupCloseEvent();
     
-};
+// };
 
 
-formElement.addEventListener('submit', formSubmitHandler);
+// formElement.addEventListener('submit', formSubmitHandler);
 
+// Постановка/снятие лайков
+// let likeBTN = document.querySelector('.elements__like');
 
-let likeBTN = document.querySelector('.elements__like');
+// function likesGiven(event) {
+//     likeBTN.classList.toggle('elements__like_active');
+// }
 
-function likesGiven(event) {
-    likeBTN.classList.toggle('elements__like_active');
-}
-
-likeBTN.addEventListener('click', likesGiven);
+// likeBTN.addEventListener('click', likesGiven);

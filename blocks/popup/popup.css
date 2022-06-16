@@ -9,5 +9,4 @@
     left: 0;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.8s, visibility 0s 0.8s;
 }

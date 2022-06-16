@@ -1,9 +1,8 @@
 .elements__item {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content;
     background-color: white;
-    max-height: 361px;
     max-width: 282px;
     border-radius: 10px;
     text-overflow: ellipsis;
@@ -13,14 +12,12 @@
 
 @media screen and (max-width: 690px) {
     .elements__item {
-        max-height: 299px;
         max-width: 220px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .elements__item {
-        max-height: 361px;
         max-width: 282px;
     }
 }

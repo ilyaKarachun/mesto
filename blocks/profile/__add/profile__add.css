@@ -9,11 +9,13 @@
     justify-self: end;
     background-position: center;
     cursor: pointer;
+    background-image: url(../../../images/plus.svg);
+    background-repeat: no-repeat;
+    border-radius: 2px;
 }
 
 .profile__add:hover {
     opacity: 0.6;
-    border: 2px solid #ffffffb6;
 }
 
 @media screen and (max-width: 1115px) {
@@ -44,5 +46,6 @@
         max-height: 50px;
         justify-self: center;
         margin-top: 33px;
+        background-image: url(../../../images/plus__mobile.svg);
     }
 }
