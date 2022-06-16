@@ -17,11 +17,11 @@
     </header>
     <main class="main">
       <section aria-label="profile" class="profile">
-        <img src="./images/avatar.svg" alt="аватар" class="profile__avatar" />
+        <img src="./images/аватар.png" alt="аватар" class="profile__avatar" />
         <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <button type="button" class="profile__edit"></button>
-        <h2 class="profile__text">Исследователь океана</h2>
-        <button type="button" class="profile__add"></button>
+        <button type="button" aria-label="кнопка для изменения информации" class="profile__edit"></button>
+        <p class="profile__text">Исследователь океана</p>
+        <button type="button" aria-label="кнопка для загрузки нового контента" class="profile__add"></button>
       </section>
       <article class="elements">
         <div class="elements__item">
@@ -32,35 +32,35 @@
           />
           <div class="elements__section">
             <h3 class="elements__title">Карачаевск</h3>
-            <button type="button" class="elements__like"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
           </div>
         </div>
         <div class="elements__item">
           <img src="./images/Elbrus.png" alt="изображение" class="elements__image" />
           <div class="elements__section">
             <h3 class="elements__title">Гора Эльбрус</h3>
-            <button type="button" class="elements__like"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
           </div>
         </div>
         <div class="elements__item">
           <img src="./images/Dombay.png" alt="изображение" class="elements__image" />
           <div class="elements__section">
             <h3 class="elements__title">Домбай</h3>
-            <button type="button" class="elements__like"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
           </div>
         </div>
         <div class="elements__item">
           <img src="./images/Elbrus.png" alt="изображение" class="elements__image" />
           <div class="elements__section">
             <h3 class="elements__title">Гора Эльбрус</h3>
-            <button type="button" class="elements__like"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
           </div>
         </div>
         <div class="elements__item">
           <img src="./images/Dombay.png" alt="изображение" class="elements__image" />
           <div class="elements__section">
             <h3 class="elements__title">Домбай</h3>
-            <button type="button" class="elements__like"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
           </div>
         </div>
         <div class="elements__item">
@@ -71,7 +71,7 @@
           />
           <div class="elements__section">
             <h3 class="elements__title">Карачаево-Черкесия</h3>
-            <button type="button" class="elements__like elements__like_active"></button>
+            <button type="button" aria-label="кнопка для оценки контента" class="elements__like elements__like_active"></button>
           </div>
         </div>
       </article>
@@ -81,18 +81,18 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-      <button type="button" class="popup__close"></button>
+      <button type="button" aria-label="кнопка для закрытия попапа" class="popup__close"></button>
         <form name="popup" class="popup__body">
           <h2 class="popup__title">Редактировать профиль</h2>
-          <input name="popup__person" type="text" placeholder="Жак-Ив Кусто" class="popup__character popup__character_name" />
+          <input name="popup__person" type="text" placeholder="Жак-Ив Кусто" class="popup__character popup_input_name" />
           <input
             name="popup__character"
             type="text"
             placeholder="Исследователь океана"
-            class="popup__character popup__character_job"
+            class="popup__character popup_input_job"
           />
-          <button type="submit" class="popup__button">Сохранить</button>
-        </form>
+          <button type="submit" aria-label="кнопка для сабмита" class="popup__button">Сохранить</button>
+        </form> 
       </div>
     </div>
     <script async src="./scripts/index.js"></script>
