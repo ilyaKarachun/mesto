@@ -95,7 +95,7 @@ addCardBTN.addEventListener('click', () => {
 const closePopupCard = document.querySelector('.popup__close_card');
 
 closePopupCard.addEventListener('click', () => {
-  addCardPopup.remove('popup_opened');
+  addCardPopup.classList.remove('popup_opened');
 });
 
 let newCardName = document.querySelector('.popup__character_img_name');
