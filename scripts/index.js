@@ -27,6 +27,9 @@ function popupCloseEvent () {
   closePopup(popupEdit);
 };
 
+function popupCloseCard () {
+  closePopup(addCardPopup);
+};
 
 
 function formSubmitHandler (evt) {
@@ -109,7 +112,7 @@ const addCard = (event) => {
   event.preventDefault();
   renderItem({name: newCardName.value, link: newCardLink.value});
  
-  closePopupCard();
+  popupCloseCard();
 }
 
 
