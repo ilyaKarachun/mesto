@@ -31,6 +31,10 @@ function popupCloseCard () {
   closePopup(addCardPopup);
 };
 
+function popupCloseModal () {
+  closePopup(modal);
+};
+
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
@@ -144,8 +148,13 @@ function deleteItem (evt) {
     evt.target.closest('.elements__like').classList.toggle('elements__like_active');
 };
 
+const modal = document.querySelector('.modal');
+
+const modalCloseBTN = document.querySelector('.modal__button');
+
+
 function modalViewOpen (evt) {
-  const modal = document.querySelector('.modal');
+  
   modal.classList.add('modal_opened');
   const modalImage = modal.querySelector('.modal__img');
   modalImage.src = evt.target.closest('.elements__image').src;
@@ -154,6 +163,9 @@ function modalViewOpen (evt) {
 }
 
 
+modalCloseBTN.addEventListener('click', () => {
+  modal.classList.remove('modal_opened');
+});
 
 renderItems()
 
