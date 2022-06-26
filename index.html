@@ -19,61 +19,41 @@
       <section aria-label="profile" class="profile">
         <img src="./images/аватар.png" alt="аватар" class="profile__avatar" />
         <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <button type="button" aria-label="кнопка для изменения информации" class="profile__edit"></button>
+        <button
+          type="button"
+          aria-label="кнопка для изменения информации"
+          class="profile__edit"
+        ></button>
         <p class="profile__text">Исследователь океана</p>
-        <button type="button" aria-label="кнопка для загрузки нового контента" class="profile__add"></button>
+        <button
+          type="button"
+          aria-label="кнопка для загрузки нового контента"
+          class="profile__add"
+        ></button>
       </section>
       <article class="elements">
-        <div class="elements__item">
-          <img
-            src="./images/krachevsk.png"
-            alt="изображение"
-            class="elements__image"
-          />
-          <div class="elements__section">
-            <h3 class="elements__title">Карачаевск</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
+        <template class="template">
+          <div class="elements__item">
+            <button
+              type="button"
+              aria-label="кнопка для удаления карточки"
+              class="elements__delete"
+            ></button>
+            <img
+              src="./images/krachevsk.png"
+              alt="изображение"
+              class="elements__image"
+            />
+            <div class="elements__section">
+              <h3 class="elements__title">Карачаевск</h3>
+              <button
+                type="button"
+                aria-label="кнопка для оценки контента"
+                class="elements__like"
+              ></button>
+            </div>
           </div>
-        </div>
-        <div class="elements__item">
-          <img src="./images/Elbrus.png" alt="изображение" class="elements__image" />
-          <div class="elements__section">
-            <h3 class="elements__title">Гора Эльбрус</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img src="./images/Dombay.png" alt="изображение" class="elements__image" />
-          <div class="elements__section">
-            <h3 class="elements__title">Домбай</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img src="./images/Elbrus.png" alt="изображение" class="elements__image" />
-          <div class="elements__section">
-            <h3 class="elements__title">Гора Эльбрус</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img src="./images/Dombay.png" alt="изображение" class="elements__image" />
-          <div class="elements__section">
-            <h3 class="elements__title">Домбай</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img
-            src="./images/krachevsk.png"
-            alt="изображение"
-            class="elements__image"
-          />
-          <div class="elements__section">
-            <h3 class="elements__title">Карачаево-Черкесия</h3>
-            <button type="button" aria-label="кнопка для оценки контента" class="elements__like elements__like_active"></button>
-          </div>
-        </div>
+        </template>
       </article>
     </main>
     <footer class="footer">
@@ -81,19 +61,72 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-      <button type="button" aria-label="кнопка для закрытия попапа" class="popup__close"></button>
+        <button
+          type="button"
+          aria-label="кнопка для закрытия попапа"
+          class="popup__close"
+        ></button>
         <form name="popup" class="popup__body">
           <h2 class="popup__title">Редактировать профиль</h2>
-          <input name="popup__person" type="text" placeholder="Жак-Ив Кусто" class="popup__character popup__character_input_name" />
+          <input
+            name="popup__person"
+            type="text"
+            placeholder="Жак-Ив Кусто"
+            class="popup__character popup__character_input_name"
+          />
           <input
             name="popup__character"
             type="text"
             placeholder="Исследователь океана"
             class="popup__character popup__character_input_job"
           />
-          <button type="submit" aria-label="кнопка для сабмита" class="popup__button">Сохранить</button>
-        </form> 
+          <button
+            type="submit"
+            aria-label="кнопка для сабмита"
+            class="popup__button"
+          >
+            Сохранить
+          </button>
+        </form>
       </div>
+    </div>
+
+    <div class="popup popup_add_Card">
+      <div class="popup__container">
+        <button
+          type="button"
+          aria-label="кнопка для закрытия попапа"
+          class="popup__close popup__close_card"
+        ></button>
+        <form name="popup" class="popup__body popup__body_card">
+          <h2 class="popup__title">Новое место</h2>
+          <input
+            name="img__name"
+            type="text"
+            placeholder="Название"
+            class="popup__character popup__character_img_name"
+          />
+          <input
+            name="img__src"
+            type="text"
+            placeholder="Ссылка на картинку"
+            class="popup__character popup__character_input_img"
+          />
+          <button
+            type="submit"
+            aria-label="кнопка для сабмита"
+            class="popup__button popup__button_add"
+          >
+            Создать
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal">
+      <button type="button" class="modal__button"></button>
+      <div class="modal__images"><img src="" alt="" class="modal__img"/></div>
+      <div class="modal__text"><h3 class="modal__title">Text</h3></div>
     </div>
     <script async src="./scripts/index.js"></script>
   </body>

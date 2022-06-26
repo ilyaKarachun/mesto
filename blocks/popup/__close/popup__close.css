@@ -10,6 +10,7 @@
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    transition: opacity 2s;
 }
 
 .popup__close:hover {
