@@ -147,7 +147,7 @@ function modalViewOpen (evt) {
   const modalImage = modal.querySelector('.modal__img');
   modalImage.src = evt.target.closest('.elements__image').src;
   const modalText = modal.querySelector('.modal__title');
-  modalText.textContent = evt.target.closest('.elements').querySelector('.elements__title').textContent;
+  modalText.textContent = evt.target.closest('.elements__item').querySelector('.elements__title').textContent;
 }
 
 
