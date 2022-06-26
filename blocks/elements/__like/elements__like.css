@@ -10,10 +10,7 @@
     cursor: pointer;
 }
 
-.elements__like:active {
-    background-image: url(../../../images/like_black.svg);
-    
-}
+
 
 .elements__like:hover {
     opacity: 0.5;
