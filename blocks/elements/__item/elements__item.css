@@ -11,6 +11,11 @@
     position: relative;
 }
 
+.elements__item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 690px) {
     .elements__item {
         max-width: 220px;

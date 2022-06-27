@@ -1,3 +1,31 @@
+//загружаемые автоматически картинки
+const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ];
+  
 const buttonEdit = document.querySelector('.profile__edit');
 const popupEdit = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
@@ -10,7 +38,7 @@ let jobInput = formElement.querySelector('.popup__character_input_job')
 let profileName = document.querySelector('.profile__title');
 let profileJob = document.querySelector('.profile__text');
 
-const itemTemplate = document.querySelector('.template').content;
+const itemTemplate = document.getElementById('template').content;
 const list = document.querySelector('.elements');
 
 function openPopup(event) {
@@ -44,38 +72,6 @@ function formSubmitHandler (evt) {
 };
 
 
-
-
-
-//загружаемые автоматически картинки
-const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
-
-
  const renderItems = () => {
   initialCards.forEach(renderItem)
  }
@@ -91,7 +87,7 @@ const initialCards = [
  
 
 const addCardBTN = document.querySelector('.profile__add');
-const addCardPopup = document.querySelector('.popup_add_Card');
+const addCardPopup = document.querySelector('.popup_add_сard');
 
 
 addCardBTN.addEventListener('click', () => {
@@ -148,30 +144,24 @@ function deleteItem (evt) {
     evt.target.closest('.elements__like').classList.toggle('elements__like_active');
 };
 
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.popup_modal');
 
-const modalCloseBTN = document.querySelector('.modal__button');
+const modalCloseBTN = document.querySelector('.popup_modal_close');
 
 
 function modalViewOpen (evt) {
   
-  modal.classList.add('modal_opened');
-  const modalImage = modal.querySelector('.modal__img');
+  modal.classList.add('popup_opened');
+  const modalImage = modal.querySelector('.popup__modal_img');
   modalImage.src = evt.target.closest('.elements__image').src;
-  const modalText = modal.querySelector('.modal__title');
+  const modalText = modal.querySelector('.popup__modal_title');
   modalText.textContent = evt.target.closest('.elements__item').querySelector('.elements__title').textContent;
 }
 
 
 modalCloseBTN.addEventListener('click', () => {
-  modal.classList.remove('modal_opened');
+  modal.classList.remove('popup_opened');
 });
 
 renderItems()
 
-// Закрытие попапа по фону
-// popup.addEventListener('click', (event) => {
-//     if(event.target === popup) {
-//         popupCloseEvent();
-//     }
-// })
