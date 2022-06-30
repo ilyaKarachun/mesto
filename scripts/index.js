@@ -47,10 +47,10 @@ const newCardInputName = document.querySelector('.popup__character_img_name');
 const newCardInputLink = document.querySelector('.popup__character_input_img');
 
 const btnAddCard = document.querySelector('.profile__add');
-const popupAddCard = document.querySelector('.popup_add_сard');
+const popupAddCard = document.querySelector('.popup_addсard');
 
 const modal = document.querySelector('.popup_modal');
-const modalCloseBtn = document.querySelector('.popup_modal_close');
+const modalCloseBtn = document.querySelector('.popup_modalclose');
 
  function createCard (object) {
   const elementHTML = itemTemplate.cloneNode(true);
