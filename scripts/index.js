@@ -50,7 +50,7 @@ const btnAddCard = document.querySelector('.profile__add');
 const popupAddCard = document.querySelector('.popup_addсard');
 
 const modal = document.querySelector('.popup_modal');
-const modalCloseBtn = document.querySelector('.popup_modalclose');
+const modalCloseBtn = document.querySelector('.popup__close_modal');
 
  function createCard (object) {
   const elementHTML = itemTemplate.cloneNode(true);
