@@ -52,23 +52,32 @@ const popupAddCard = document.querySelector('.popup_add_сard');
 const modal = document.querySelector('.popup_modal');
 const modalCloseBtn = document.querySelector('.popup_modal_close');
 
-const renderStarterItems = () => {
-  initialCards.forEach(renderItem)
+ function createCard (object) {
+  const elementHTML = itemTemplate.cloneNode(true);
+  elementHTML.querySelector('.elements__title').textContent = object.name;
+  elementHTML.querySelector('.elements__image').src = object.link; 
+  setEventListenersCard(elementHTML);
+  return elementHTML;
  }
 
-const renderItem = (object) => {
-   const elementHTML = itemTemplate.cloneNode(true);
-   elementHTML.querySelector('.elements__title').textContent = object.name;
-   elementHTML.querySelector('.elements__image').src = object.link;
-   elementHTML.querySelector('.elements__image').alt = object.name;  
-   setEventListenersCard(elementHTML);
-   listCards.prepend(elementHTML);
+function renderCard(elementHTML) {
+  listCards.prepend(elementHTML);
  }
 
-const addCard = (event) => {
+initialCards.forEach((elementHTML) => {
+  renderCard(createCard (elementHTML));
+})
+
+function clearPopupCardInput() {
+  newCardInputName.value ='';
+  newCardInputLink.value = '';
+}
+
+const handleFormAddCard = (event) => {
   event.preventDefault();
-  renderItem({name: newCardInputName.value, link: newCardInputLink.value});
+  renderCard(createCard({name: newCardInputName.value, link: newCardInputLink.value}));
   closePopupCard();
+  clearPopupCardInput();
 }
 
 function openPopupEdit() {
@@ -131,8 +140,6 @@ function modalViewOpen (evt) {
   modalText.textContent = evt.target.closest('.elements__item').querySelector('.elements__title').textContent;
 }
 
-renderStarterItems()
-
 btnAddCard.addEventListener('click', () => {
   openPopup(popupAddCard);
 });
@@ -141,7 +148,7 @@ btnClosePopupCard.addEventListener('click', () => {
   closePopup(popupAddCard);
 });
 
-formCreate.addEventListener('submit', addCard);
+formCreate.addEventListener('submit', handleFormAddCard);
 formElementProfile.addEventListener('submit', handleFormEdit);
 buttonEdit.addEventListener('click', openPopupEdit);
 popupCloseProfileBtn.addEventListener('click', closePopupEdit);
