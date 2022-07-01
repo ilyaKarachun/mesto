@@ -28,7 +28,7 @@ const initialCards = [
 const buttonEdit = document.querySelector('.profile__edit');
 const popupEdit = document.querySelector('.popup');
 const popupCloseProfileBtn = document.querySelector('.popup__close_profile_button');
-const formElementProfile = document.querySelector('.popup__body');
+const formElementProfile = document.querySelector('.popup__body_profile');
 
 const nameInput = formElementProfile.querySelector('.popup__character_input_name');
 const jobInput = formElementProfile.querySelector('.popup__character_input_job')
@@ -36,7 +36,7 @@ const jobInput = formElementProfile.querySelector('.popup__character_input_job')
 const profileName = document.querySelector('.profile__title');
 const profileJob = document.querySelector('.profile__text');
 
-const itemTemplate = document.getElementById('template').content;
+const itemTemplate = document.querySelector('#template').content;
 const listCards = document.querySelector('.elements');
 
 const btnClosePopupCard = document.querySelector('.popup__close_card');
@@ -65,19 +65,14 @@ function renderCard(elementHTML) {
  }
 
 initialCards.forEach((elementHTML) => {
-  renderCard(createCard (elementHTML));
+  renderCard(createCard(elementHTML));
 })
-
-function clearPopupCardInput() {
-  newCardInputName.value ='';
-  newCardInputLink.value = '';
-}
 
 const handleFormAddCard = (event) => {
   event.preventDefault();
   renderCard(createCard({name: newCardInputName.value, link: newCardInputLink.value}));
   closePopupCard();
-  clearPopupCardInput();
+  formCreate.reset();
 }
 
 function openPopupEdit() {
